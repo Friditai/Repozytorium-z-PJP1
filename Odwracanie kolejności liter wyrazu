@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+int main()
+{
+    char word[80];
+    char opposite[80];
+    int i, n;
+
+    printf("This program prints words in the opposite order.\n");
+    printf("Please write a word: ");
+    scanf("%s", word);
+    printf("Your input is: %s\n", word);
+
+    n = strlen(word);
+
+    printf("The length of the word is: %d\n",n);
+
+    for(i = 0; i <= n; i++){   // dodane '<=' zamiast '<' ze względu na NULL
+
+        opposite[i]=word[n-i-1];
+    }
+
+    printf("Your word in the opposite order is: %s\n", opposite);
+    return 0;
+}
