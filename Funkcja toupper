@@ -5,7 +5,7 @@
 int main()
 {
     char word[80];
-    int i, n;
+    int i = 0, n;
 
     printf("This program converts words to upper case.\n");
     printf("Please write a word: ");
@@ -16,9 +16,10 @@ int main()
 
     printf("The length of the word is: %d\n",n);
 
-    for (i = 0; i < n; i++) {
-
+    while(i < n)
+    {
         word[i] = toupper(word[i]);
+        i++;
 
     }
 
