@@ -1,0 +1,20 @@
+int main()
+{
+    int i, j, liczba;
+
+    printf("Program wypisuje ciagi liczb, tworzac trojkat.\n");
+    printf("Podaj najwieksza liczbe w trojkacie:\n");
+    scanf("%i",&liczba);
+
+    for(i = 0; i <= liczba; i++)
+    {
+            printf("\n");
+            
+        for(j = 0; j <= i; j++)
+        {
+            printf("%i", j);
+        }
+    }
+
+    return 0;
+}
