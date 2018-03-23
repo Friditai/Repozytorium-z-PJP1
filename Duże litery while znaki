@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+int main()
+{
+    char letter = 'a';
+    printf("This program prints the alphabet.\n");
+    while ( letter <= 'z') {
+
+        printf("%c", toupper(letter));
+        letter++;
+    }
+    printf("\n");
+
+    return 0;
+}
