@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+int main()
+{
+    char wyraz[80];
+    int i, n;
+
+    printf("Program zmieniajacy wybrane litery w nastepujacy sposob:\n\n");
+    printf("'a', 'b', 'c', 'A', 'B', 'C' na 'X'\n");
+    printf("'d', 'e', 'f', 'D', 'E', 'F' na 'Y'\n\n");
+    printf("Podaj wyraz, ktory chcesz zmienic:\n");
+    scanf("%s", wyraz);
+
+    n = strlen(wyraz);
+
+    for(i=0; i<=n; i++)
+    {
+        switch(wyraz[i])
+        {
+            case 'a':
+            case 'A':
+            case  'b':
+            case 'B':
+            case 'c':
+            case 'C':
+                wyraz[i] = 'X';
+                break;
+            case 'd':
+            case 'D':
+            case 'e':
+            case 'E':
+            case 'f':
+            case 'F':
+                wyraz[i] = 'Y';
+                break;
+        }
+    }
+
+  printf("Wyraz zmieniony to: %s", wyraz);
+
+
+    return 0;
+}
