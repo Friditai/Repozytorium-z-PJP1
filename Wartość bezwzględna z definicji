@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int wartoscbezwzgledna(int x)
+
+{
+    if(x>=0) return x;
+    else return -x;
+
+}
+
+int main()
+{
+    int a, b;
+    printf("Podaj liczbe:");
+    scanf("%i",&a);
+    b=wartoscbezwzgledna(a);
+    printf("Wartosc bezwzgledna %i to %i",a,b);
+    return 0;
+}
