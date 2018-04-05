@@ -15,7 +15,13 @@ int main()
     float pole;
     printf("Podaj promien:");
     scanf("%i",&r);
+    if(r>0)
+    {
     pole = powierzchniakola(r);
     printf("Pole kola o promieniu %i wynosi %f: ",r,pole);
+    } else
+    {
+        printf("ERROR: promien nie moze byc ujemny!");
+    }
     return 0;
 }
