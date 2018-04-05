@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+void lower_to_upper(char* word)
+{
+    int i,n = strlen(word);
+    for(i=0;i<n;i++)
+    {
+        word[i]=toupper(word[i]);
+    }
+    *word;
+
+}
+
+int main()
+{
+    char wyrazmaly[80];
+    printf("Napisz wyraz ktory chcesz zapisac wielkimi literami:\n");
+    scanf("%s",wyrazmaly);
+    lower_to_upper(&wyrazmaly);
+    printf("Powyzszy wyraz zapisany wielka litera to:\n%s",wyrazmaly);
+
+
+    return 0;
+}
