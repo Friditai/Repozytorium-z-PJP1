@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float powierzchniakola(int promien)
+
+{
+    const float pi = 3.1415;
+    return pi*promien*promien;
+
+}
+
+int main()
+{
+    int r;
+    float pole;
+    printf("Podaj promien:");
+    scanf("%i",&r);
+    pole = powierzchniakola(r);
+    printf("Pole kola o promieniu %i wynosi %f: ",r,pole);
+    return 0;
+}
