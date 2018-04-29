@@ -1,0 +1,56 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <math.h>
+
+void printVector(int* a, int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%3i ",a[i]);
+    }
+}
+
+
+int krotnosc(int* a, int dima, int* c, int dimc)
+{
+      /* first put all elements in counting vector to zero */
+      int i;
+      for (i=0; i<dimc; i++)
+      {
+            c[i] = 0;
+      }
+      /* use vector c for the counting */
+      int liczba;
+      for (i=0; i<dima; i++)
+      {
+            liczba = a[i];
+            c[liczba-1]++;
+      }
+      return c[liczba-1];
+}
+
+int main()
+{
+    int szostka[6], countvec[49],k,i;
+
+     /*zagniezdzamy generator losowej liczby*/
+    srand(time(NULL));
+
+    do {
+    for (i=0; i<6; i++)
+    {
+        szostka[i]=rand()%49+1;
+    }
+    k=krotnosc(szostka,6,countvec,49);
+    } while(k>=2);
+
+
+    printf("Wylosowano liczby:\n");
+    printVector(szostka, 6);
+
+
+
+    return EXIT_SUCCESS;
+}
