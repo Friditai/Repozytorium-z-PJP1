@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int myRand(int m)
+{
+    int r;
+     /*losuje liczbe z zakresu od 1 do m */
+        r = rand()%m+1;
+    return r;
+
+}
+
+int main()
+{
+    int max, i, n, randomNumber;
+
+    printf("Enter the upper limit of the range:");
+    scanf("%i",&max);
+    printf("How many random numbers would you like to have?");
+    scanf("%i",&n);
+
+    /*zagniezdza aktualny czas jako poczatkowa liczbe, dzieki czemu potem losujemy za kazdym razem inne liczby*/
+    srand(time(NULL));
+    for(i=0; i<=n;i++)
+    {
+        randomNumber = myRand(max);
+        printf("%i\n", randomNumber);
+    }
+
+
+     return 0;
+}
