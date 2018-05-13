@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void wyswietl_wektor(int* a, int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%2i: %i\n",i,a[i]);
+    }
+}
+
+int fibonacci(int* a, int n)
+{
+    int i;
+    a[0]=0;
+    a[1]=1;
+    for(i=2;i<21;i++)
+    {
+        a[i]=a[i-1]+a[i-2];
+
+    }
+    return a[i];
+
+
+}
+
+int main()
+{
+    int wektor[21];
+
+    printf("The program is generating the first 21 Fibonacci numbers:\n\n");
+
+    fibonacci(wektor,21);
+
+    wyswietl_wektor(wektor,21);
+
+
+    return 0;
+}
