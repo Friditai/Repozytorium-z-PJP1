@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct person
+{
+    char given_name[20];
+    char surname[20];
+    char city[20];
+    int age;
+    long long unsigned pesel;
+
+};
+
+//wskaznikowo
+void printPerson1(struct person* ptr)
+{
+    printf("Name: %s %s\n", ptr->given_name, ptr->surname);
+    printf("PESEL number: %llu\n", ptr->pesel);
+    printf("The city: %s\n", ptr->city);
+    printf("Age: %d\n", ptr->age);
+}
+
+void printPerson2(struct person joe)
+{
+    printf("Name: %s %s\n", joe.given_name, joe.surname);
+    printf("PESEL number: %llu\n", joe.pesel);
+    printf("The city: %s\n", joe.city);
+    printf("Age: %d\n", joe.age);
+}
+
+void readPerson(struct person* ptr)
+{
+    printf("Enter your name and surname:\n");
+    scanf("%s %s",ptr->given_name,ptr->surname);
+    printf("Enter your city:\n");
+    scanf("%s",ptr->city);
+    printf("Enter your age:\n");
+    scanf("%d",&ptr->age);
+    printf("Enter your PESEL number:\n");
+    scanf("%llu",&ptr->pesel);
+}
+int main()
+{
+    struct person ja;
+
+    readPerson(&ja);
+    printPerson1(&ja);
+    printPerson2(ja);
+
+    return EXIT_SUCCESS;
+}
+
+
